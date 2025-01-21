@@ -1,6 +1,6 @@
 # paketo-dynatrace-demo
 
-Run with the following pack command:
+Run with the following pack command while inside of the test-project folder:
 
 ```
 pack build test-project \
