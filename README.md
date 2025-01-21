@@ -15,7 +15,6 @@ pack build test-project \
 --env BP_MAVEN_ADDITIONAL_BUILD_ARGUMENTS="-Dquarkus.native.sources-only=true -DenvironmentUrl=https://[an-environment].live.dynatrace.com -DapiToken=[your-token]" \
 --env BP_NATIVE_IMAGE_BUILT_ARTIFACT=target/native-sources/*-runner.jar \
 --env BP_NATIVE_IMAGE_BUILD_ARGUMENTS_FILE=target/native-sources/native-image.args \
---env BP_MAVEN_BUILT_MODULE=load-verification-webservice \
 --env BP_MAVEN_BUILT_ARTIFACT="target .dynatrace"
 --volume [path-to-parent-folder]/dynatrace/binding:/platform/bindings/Dynatrace
 ```
