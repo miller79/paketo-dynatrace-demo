@@ -1,0 +1,16 @@
+quarkus:
+  application:
+    name: test-project
+  container-image:
+    name: ${quarkus.application.name}
+  http:
+    root-path: /${quarkus.application.name}
+    non-application-root-path: ${quarkus.http.root-path}
+  native:
+    container-build: true
+  jib:
+    base-native-image: quay.io/quarkus/quarkus-micro-image:2.0
+    working-directory: /work
+    user: 1001
+  test:
+    native-image-profile: test
